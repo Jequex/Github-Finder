@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 
 const UserItem = ({avatar_url, login, html_url}) => {
@@ -9,7 +10,7 @@ return (
             alt="" className="round-img" 
             style={{width: "60px"}} />
             <h3>{login}</h3>
-            <a href={html_url} className="btn btn-sm btn-dark my-1" target="_blank" rel="noopener noreferrer">more</a>
+            <Link to={`/user/${login}`} className="btn btn-sm btn-dark my-1">more</Link>
         </div>
     )
 }
